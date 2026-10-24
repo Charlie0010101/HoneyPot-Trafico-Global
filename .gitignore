@@ -5,3 +5,5 @@ honeypot-logs/
 *.json.gz
 *.log
 known_hosts*
+registros-del-dia/
+honeypot-analysis/
