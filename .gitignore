@@ -1,0 +1,7 @@
+# Credenciales y datos crudos: nunca al repo
+.telegram.env
+*.env
+honeypot-logs/
+*.json.gz
+*.log
+known_hosts*

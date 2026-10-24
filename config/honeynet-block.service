@@ -1,0 +1,12 @@
+[Unit]
+Description=Bloquear salida de la red honeynet
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c 'iptables -C DOCKER-USER -s 172.30.0.0/24 ! -d 172.30.0.0/24 -m conntrack --ctstate NEW -j DROP || iptables -I DOCKER-USER -s 172.30.0.0/24 ! -d 172.30.0.0/24 -m conntrack --ctstate NEW -j DROP'
+
+[Install]
+WantedBy=multi-user.target
