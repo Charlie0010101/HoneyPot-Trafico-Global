@@ -23,7 +23,7 @@ Internet
    ├── :22      ──► Docker (red honeynet, sin salida) ──► Cowrie  (señuelo SSH)
    ├── :40222   ──► SSH real (solo llave, sin contraseña)
    ├── :80/443  ──► (fase 2) contenedor con página señuelo
-   └── :25565   ──► Servidor de Minecraft (servicio real, aparte)
+   └── :25565   ──► Servidor DB
 
 Host ──(cron diario)──► script de resumen ──► Telegram (resumen + logs .gz)
 ```
